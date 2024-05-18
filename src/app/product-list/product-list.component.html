@@ -1,0 +1,35 @@
+<h3>Lista de productos</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Talle</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of products; track product.name) {
+        <tr>
+            <td><img [src]="product.image" [alt]="product.name" width="100"></td>
+            <td>{{product.name}}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price | currency}}</td>
+            <td>{{ product.size }}</td>
+            @if (product.stock > 0) {
+                <td class="badge text-bg-success">EN STOCK</td>
+            } @else {
+                <td class="badge text-bg-warning">NO STOCK</td>
+            }
+            <td>
+                <button type="button" class="btn btn-secondary" (click)="downQuantity(product)">-</button>
+                    {{product.quantity}}
+                <button type="button" class="btn btn-secondary" (click)="upQuantity(product)">+</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
