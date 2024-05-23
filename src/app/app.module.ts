@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './product/home.component';
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CartComponent } from './cart/cart.component';
     HomeComponent,
     AboutComponent,
     CartComponent,
+    InputNumberComponent,
   ],
   imports: [
     BrowserModule,

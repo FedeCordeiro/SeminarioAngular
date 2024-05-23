@@ -111,15 +111,9 @@ export class ProductListComponent {
     }
   ];
 
-  upQuantity (product:Product): void {
-    if (product.quantity < product.stock) {
-      product.quantity++;
-    }
+  maxStock(m: number) {
+    alert ("NO HAY STOCK");
   }
+  
 
-  downQuantity (product:Product): void {
-    if (product.quantity > 0) {
-      product.quantity--;
-    }
-  }
 }

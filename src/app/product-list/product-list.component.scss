@@ -30,23 +30,15 @@ td {
 img {
     width: 120px;
     height: 120px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 img:hover {
     height: 170px;
     width: 170px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
-.btn-secondary {
-    margin: 2px;
-    padding: 2px;
-    width: 20px;
-    height: 40px;
-    align-items: center;
-    text-align: center;
-}
 
 /* Media query para pantallas más grandes */
 @media screen and (min-width: 768px) {

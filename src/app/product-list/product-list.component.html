@@ -1,4 +1,4 @@
-<h3>Lista de productos</h3>
+<h3>Indumentaria Boca Juniors</h3>
 <table class="table">
     <thead>
         <tr>
@@ -25,9 +25,10 @@
                 <td class="badge text-bg-warning">NO STOCK</td>
             }
             <td>
-                <button type="button" class="btn btn-secondary" (click)="downQuantity(product)">-</button>
-                    {{product.quantity}}
-                <button type="button" class="btn btn-secondary" (click)="upQuantity(product)">+</button>
+                <app-input-number [(quantity)]="product.quantity" 
+                    [stock]="product.stock" 
+                    (maxStock)="maxStock($event)">
+                </app-input-number>
             </td>
         </tr>
         }
