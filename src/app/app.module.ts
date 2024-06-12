@@ -26,7 +26,7 @@ import { AddCartComponent } from './components/add-cart/add-cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

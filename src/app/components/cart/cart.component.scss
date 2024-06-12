@@ -4,3 +4,30 @@ svg:hover {
         0 0 10px black
     )
 }
+
+.cart-list {
+    list-style-type: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.cart-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre elementos */
+}
+
+.cart-list button {
+    background-color: #dc3545; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 5px 5px; /* Padding del botón */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.cart-list button:hover {
+    background-color: #c82333; /* Color de fondo rojo oscuro al pasar el cursor */
+}
