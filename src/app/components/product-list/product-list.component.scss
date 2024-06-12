@@ -1,5 +1,11 @@
 thead {
-    display: none; /* Ocultar encabezados en dispositivos móviles */
+    margin: 20px;
+    text-align: center;
+    display: none;
+}
+
+table {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 tr {
@@ -39,7 +45,6 @@ img:hover {
     transition: 0.5s;
 }
 
-
 /* Media query para pantallas más grandes */
 @media screen and (min-width: 768px) {
     thead {
@@ -66,7 +71,11 @@ img:hover {
     }
 
     img:hover {
-        height: 250px;
-        width: 250px;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        filter: drop-shadow(
+            0 0 10px black
+        )
     }
 }

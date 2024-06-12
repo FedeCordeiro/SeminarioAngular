@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from './Product-list';
+import { CartComponent } from '../cart/cart.component';
+import { CartService } from '../../cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +12,7 @@ import { Product } from './Product-list';
 export class ProductListComponent {
 
   products: Product[] = [{
-      name: "Camiseta Boca",
+      name: "CAMISETA OFICIAL BOCA JUNIORS",
       description: "Luce los colores del club con esta camiseta oficial de Boca Juniors. Temporada 2024.",
       size: "XL",
       price: 125000,
@@ -20,7 +22,7 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Camiseta Arquero",
+      name: "CAMISETA OFICIAL ARQUERO BOCA JUNIORS",
       description: "Protege el arco con estilo con la camiseta de arquero oficial de Boca Juniors. Temporada 2024.",
       size: "L",
       price: 100000,
@@ -30,7 +32,7 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Campera",
+      name: "CAMPERON INVIERNO BOCA JUNIORS",
       description: "Mantente abrigado con elegancia con la campera oficial de Boca Juniors.",
       size: "M",
       price: 170000,
@@ -40,7 +42,7 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Campera Algodon",
+      name: "CAMPERA ALGODON ADIDAS",
       description: "Comodidad y estilo con la campera de algodón oficial de Boca Juniors.",
       size: "L",
       price: 80000,
@@ -50,7 +52,7 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Campera Hombre",
+      name: "CAMPERA HOMBRE",
       description: "Campera para hombre con el escudo de Boca Juniors. Confeccionada 100% con algodon." ,
       size: "XL",
       price: 110000,
@@ -60,7 +62,7 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Campera Mujer",
+      name: "CAMPERA MUJER",
       description: "Diseño exclusivo para las aficionadas. Confeccionada 100% con algondon.",
       size: "M",
       price: 110000,
@@ -70,7 +72,7 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Pantalon",
+      name: "PANTALON ALGODON",
       description: "Completa tu conjunto con el pantalón de entrenamiento oficial de Boca Juniors. Temporada 2024.",
       size: "L",
       price: 90000,
@@ -80,7 +82,7 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Short",
+      name: "SHORT OFICIAL BOCA JUNIORS",
       description: "Libertad de movimiento con estilo. Short oficial Boca Juniors. Temporada 2024.",
       size: "M",
       price: 55000,
@@ -90,7 +92,7 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Remera",
+      name: "CAMISETA ENTRENAMIENTO BOCA JUNIORS",
       description: "Luce casual con la remera oficial de Boca Juniors.",
       size: "S",
       price: 70000,
@@ -100,16 +102,29 @@ export class ProductListComponent {
       quantity: 0,
     },
     {
-      name: "Medias",
+      name: "MEDIAS LARGAS CABJ",
       description: "Complementa tu outfit con las medias oficiales del club.",
       size: "Única",
-      price: 20000,
+      price: 12000,
       stock: 20,
       image: "assets/img/medias.jpeg",
       clearence: false,
       quantity: 0,
     }
   ];
+  
+  constructor (private cart: CartService) {
+  }
+
+  addToCart(product: Product): void {
+    if (product.quantity > 0) {
+        this.cart.addToCart(product);
+        product.stock -= product.quantity;
+        product.quantity = 0;
+    } else {
+        alert("Por favor, selecciona una cantidad mayor que 0.");
+    }
+}
 
   maxStock(m: number) {
     alert ("NO HAY STOCK");

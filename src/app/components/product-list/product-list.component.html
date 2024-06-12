@@ -1,4 +1,3 @@
-<h3>Indumentaria Boca Juniors</h3>
 <table class="table">
     <thead>
         <tr>
@@ -8,7 +7,8 @@
             <th scope="col">Precio</th>
             <th scope="col">Talle</th>
             <th scope="col">Stock</th>
-            <th scope="col">Compra</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Agregar</th>
         </tr>
     </thead>
     <tbody>
@@ -24,12 +24,15 @@
             } @else {
                 <td class="badge text-bg-warning">NO STOCK</td>
             }
+            @if (product.stock > 0) {
             <td>
                 <app-input-number [(quantity)]="product.quantity" 
                     [stock]="product.stock" 
                     (maxStock)="maxStock($event)">
                 </app-input-number>
             </td>
+            <td><app-add-cart (click)="addToCart(product)"></app-add-cart></td>
+            }
         </tr>
         }
     </tbody>
