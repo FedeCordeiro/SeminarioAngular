@@ -10,10 +10,12 @@
     @for (product of cartList$ | async; track product.name) {
     <li>
       <img [src]="product.image" alt="{{product.name}}" width="100" height="90">
-      <h5>
-        CANTIDAD:
-        <small class="text-body-secondary">{{ product.quantity }} </small>
-      </h5>
+      <h6> CANTIDAD:
+        <small class="text-body-secondary">{{ product.quantity }}</small>
+      </h6>
+      <h6> PRECIO:
+        <small class="text-body-secondary">${{product.price * product.quantity}}</small>
+      </h6>
       <button (click)="removeFromCart(product)">Eliminar</button>
     </li>
     }

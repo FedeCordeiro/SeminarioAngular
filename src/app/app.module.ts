@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
 import { InputNumberComponent } from './components/input-number/input-number.component';
 import { AddCartComponent } from './components/add-cart/add-cart.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AddCartComponent } from './components/add-cart/add-cart.component';
     CartComponent,
     InputNumberComponent,
     AddCartComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
