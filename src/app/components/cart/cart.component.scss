@@ -1,3 +1,7 @@
+svg {
+    margin-left: 50px;
+}
+
 svg:hover {
     transition: 0.3s;
     filter: drop-shadow(
@@ -6,9 +10,9 @@ svg:hover {
 }
 
 .cart-list {
-    list-style-type: none; /* Elimina las viñetas */
-    padding: 0; /* Elimina el padding por defecto */
-    margin: 0; /* Elimina el margen por defecto */
+    list-style-type: none; 
+    padding: 10px; 
+    margin-left: 50px; 
 }
 
 .cart-list li {
@@ -16,18 +20,18 @@ svg:hover {
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    border-bottom: 1px solid #ddd; /* Línea divisoria entre elementos */
+    border-bottom: 1px solid #ddd; 
 }
 
 .cart-list button {
-    background-color: #dc3545; /* Color de fondo rojo */
-    color: white; /* Color del texto blanco */
-    border: none; /* Sin borde */
-    padding: 10px 10px; /* Padding del botón */
-    cursor: pointer; /* Cursor de puntero */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #dc3545; 
+    color: white; 
+    border: none; 
+    padding: 10px 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
 }
 
 .cart-list button:hover {
-    background-color: #c82333; /* Color de fondo rojo oscuro al pasar el cursor */
+    background-color: #c82333; 
 }
