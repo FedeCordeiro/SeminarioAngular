@@ -1,27 +1,39 @@
 # SeminarioAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
-## Development server
+# Proyecto de Indumentaria de Boca Juniors
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este proyecto es una aplicación web desarrollada con Angular que permite a los usuarios ver una lista de productos de indumentaria del club de fútbol Boca Juniors, agregarlos a un carrito de compras y gestionar sus compras utilizando componentes observables.
 
-## Code scaffolding
+# Características
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Lista de Productos**: Muestra una lista de productos disponibles con sus detalles.
 
-## Build
+**Carrito de Compras**: Permite a los usuarios agregar productos a un carrito de compras.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Gestión del Carrito**: Los usuarios pueden ver los productos en su carrito y eliminar productos.
 
-## Running unit tests
+**Componentes Observables**: Utiliza observables para gestionar el estado de los productos y el carrito de compras.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Instalación y Ejecución
+Sigue estos pasos para ejecutar el proyecto localmente:
 
-## Running end-to-end tests
+1) **Clona el repositorio:** git clone https://github.com/FedeCordeiro/Seminario-Angular.git
+2) **Instalar dependencias:** npm install
+3) **Iniciar el servidor:** ng serve
+4) **Abre tu navegador y ve a http://localhost:4200**.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Datos Personales
 
-## Further help
+**Nombre:** Diego Federico
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Apellido:** Cordeiro
+
+**DNI:** 38.683.841
+
+**Email:** federico.cordeiro95@gmail.com
+
+**Sede:** Quequen
+
+**Enlace StackBlitz:** https://stackblitz.com/~/github.com/fedecordeiro/seminario-angular
