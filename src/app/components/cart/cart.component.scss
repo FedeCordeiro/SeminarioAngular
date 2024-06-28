@@ -12,26 +12,38 @@ svg:hover {
 .cart-list {
     list-style-type: none; 
     padding: 10px; 
-    margin-left: 50px; 
+    margin: 10px; 
 }
 
 .cart-list li {
     display: flex;
-    align-items: center;
+    align-items:flex-start;
     justify-content: space-between;
-    padding: 5px;
-    border-bottom: 1px solid #ddd; 
+    padding: 2px;
+    border-bottom: 1px solid #ddd;
 }
 
 .cart-list button {
     background-color: #dc3545; 
     color: white; 
     border: none; 
-    padding: 10px 10px; 
+    padding: 5px 5px; 
     cursor: pointer; 
     border-radius: 5px; 
 }
 
 .cart-list button:hover {
     background-color: #c82333; 
+}
+
+h6 {
+    margin: 5px;
+    font-size: 15px;
+}
+
+/* Media query para pantallas más grandes */
+@media screen and (min-width: 768px) {
+    .cart-list {
+        margin-left: 50px;
+    }
 }
