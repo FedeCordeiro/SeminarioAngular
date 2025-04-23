@@ -218,4 +218,38 @@ body, html {
     right: 0;
     width: 0;
   }
+
+  .info-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  .info-section h3 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+
+  .info-section p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .info-section a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .info-section a:hover {
+    text-decoration: underline;
+  }
+
+  .info-section p:last-child {
+    margin-top: 10px;
+  }
   

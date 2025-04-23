@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (product of products; track product.name) {
+        @for (product of paginatedProducts; track product.name) {
         <tr>
             <td><img [src]="product.image" [alt]="product.name" width="100"></td>
             <td>{{product.name}}</td>
@@ -37,3 +37,16 @@
         }
     </tbody>
 </table>
+<nav class="mt-3">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="page === 1">
+        <button class="page-link" (click)="page = page - 1">Anterior</button>
+      </li>
+      <li class="page-item disabled">
+        <span class="page-link">Página {{ page }}</span>
+      </li>
+      <li class="page-item" [class.disabled]="page * pageSize >= products.length">
+        <button class="page-link" (click)="page = page + 1">Siguiente</button>
+      </li>
+    </ul>
+  </nav>
